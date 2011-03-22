@@ -1,0 +1,5 @@
+﻿bin/*
+obj/*
+ConsumerKeys.settings
+ConsumerKeys.Designer.cs
+app.config
