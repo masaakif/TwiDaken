@@ -54,8 +54,6 @@ namespace TwiDaken
             au.GetAccessToken(txtPIN.Text);
             label2.Text = "Autorization Finished! Please close this dialog.";
             Cursor.Current = Cursors.Default;
-            //AccessToken = au.AccessToken;
-            //UserId = au.UserId;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

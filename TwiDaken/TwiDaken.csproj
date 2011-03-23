@@ -76,6 +76,11 @@
     <Compile Include="dlgTwitterOAuth.Designer.cs">
       <DependentUpon>dlgTwitterOAuth.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="dlgTwitterOAuth.en.resx">
       <DependentUpon>dlgTwitterOAuth.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,9 +91,6 @@
       <DependentUpon>dlgTwitterOAuth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTwiDaken.en.resx">
-      <DependentUpon>frmTwiDaken.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTwiDaken.is.resx">
       <DependentUpon>frmTwiDaken.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTwiDaken.ja.resx">
@@ -122,11 +124,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="TwiDaken.ico" />

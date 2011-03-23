@@ -39,6 +39,8 @@
             this.lvwCounts = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,42 +58,44 @@
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.toolToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             // 
             // toolToolStripMenuItem
             // 
+            resources.ApplyResources(this.toolToolStripMenuItem, "toolToolStripMenuItem");
             this.toolToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.authenticationToolStripMenuItem,
             this.optionToolStripMenuItem});
             this.toolToolStripMenuItem.Name = "toolToolStripMenuItem";
-            resources.ApplyResources(this.toolToolStripMenuItem, "toolToolStripMenuItem");
             // 
             // authenticationToolStripMenuItem
             // 
-            this.authenticationToolStripMenuItem.Name = "authenticationToolStripMenuItem";
             resources.ApplyResources(this.authenticationToolStripMenuItem, "authenticationToolStripMenuItem");
+            this.authenticationToolStripMenuItem.Name = "authenticationToolStripMenuItem";
             this.authenticationToolStripMenuItem.Click += new System.EventHandler(this.authenticationToolStripMenuItem_Click);
             // 
             // optionToolStripMenuItem
             // 
-            this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
             resources.ApplyResources(this.optionToolStripMenuItem, "optionToolStripMenuItem");
+            this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
             // 
             // lvwCounts
             // 
+            resources.ApplyResources(this.lvwCounts, "lvwCounts");
             this.lvwCounts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
-            resources.ApplyResources(this.lvwCounts, "lvwCounts");
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
             this.lvwCounts.Name = "lvwCounts";
             this.lvwCounts.UseCompatibleStateImageBehavior = false;
             this.lvwCounts.View = System.Windows.Forms.View.Details;
@@ -104,6 +108,14 @@
             // 
             resources.ApplyResources(this.columnHeader2, "columnHeader2");
             // 
+            // columnHeader3
+            // 
+            resources.ApplyResources(this.columnHeader3, "columnHeader3");
+            // 
+            // columnHeader4
+            // 
+            resources.ApplyResources(this.columnHeader4, "columnHeader4");
+            // 
             // frmTwiDaken
             // 
             resources.ApplyResources(this, "$this");
@@ -112,6 +124,7 @@
             this.Controls.Add(this.btnTweet);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmTwiDaken";
             this.menuStrip1.ResumeLayout(false);
@@ -133,6 +146,8 @@
         private System.Windows.Forms.ListView lvwCounts;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
 

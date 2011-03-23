@@ -17,14 +17,18 @@ namespace TwiDaken
     {
         private class ModuleCountPair
         {
-            string moduleName = "";
-            int count = 0;
+            private string moduleName = "";
+            private int count = 0;
+            private DateTime dt_start;
+            private DateTime dt_last;
+            
 
             public ModuleCountPair(string _module)
             {
                 if (moduleName == "")
                 {
                     moduleName = _module;
+                    dt_start = DateTime.Now;
                 }
             }
 
@@ -38,11 +42,21 @@ namespace TwiDaken
                 return count;
             }
 
+            public string getStartTime()
+            {
+                return dt_start.ToShortTimeString();
+            }
+
+            public string getLastTime()
+            {
+                return dt_last.ToShortTimeString();
+            }
+
             public void inc(string _module)
             {
                 if (moduleName == _module)
                 {
-                    count++;
+                    inc();
                 }
             }
 
@@ -50,6 +64,7 @@ namespace TwiDaken
             {
                 if (moduleName != "")
                 {
+                    dt_last = DateTime.Now;
                     count++;
                 }
             }
@@ -75,6 +90,26 @@ namespace TwiDaken
             this.Text = "TwiDaken " + "version " + Application.ProductVersion;
         }
 
+        private void updateListViewCounts(ref ModuleCountPair mcp)
+        {
+            bool isExist = false;
+            foreach (ListViewItem item in lvwCounts.Items)
+            {
+                if (item.SubItems[0].Text == mcp.getModuleName())
+                {
+                    item.SubItems[1].Text = mcp.getCount().ToString();
+                    item.SubItems[3].Text = mcp.getLastTime();
+                    isExist = true;
+                }
+            }
+
+            if (isExist == false)
+            {
+                string[] ary = { mcp.getModuleName(), mcp.getCount().ToString(),mcp.getStartTime(), mcp.getLastTime()};
+                lvwCounts.Items.Add(new ListViewItem(ary));
+            }
+        }
+
         private void Global_KeyDown(object sender, KeybordCapture.KeybordCaptureEventArgs e)
         {
             string _module = ut.getActiveWindowModuleName();
@@ -87,21 +122,7 @@ namespace TwiDaken
             }
 
             mcp.inc(_module);
-
-            bool isExist = false;
-            foreach(ListViewItem item in lvwCounts.Items)
-            {
-                if (item.SubItems[0].Text == _module)
-                {
-                    item.SubItems[1].Text = mcp.getCount().ToString();
-                    isExist = true;
-                }
-            }
-            if (isExist == false)
-            {
-                string[] ary = { _module, mcp.getCount().ToString() };
-                lvwCounts.Items.Add(new ListViewItem(ary));
-            }
+            updateListViewCounts(ref mcp);
         }
 
         private void authenticationToolStripMenuItem_Click(object sender, EventArgs e)
