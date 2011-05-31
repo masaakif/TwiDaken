@@ -124,23 +124,23 @@
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
     <value>ファイル(&amp;F)</value>
   </data>
-  <data name="authenticationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
-  </data>
-  <data name="authenticationToolStripMenuItem.Text" xml:space="preserve">
-    <value>承認画面(&amp;A)</value>
-  </data>
-  <data name="optionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
-  </data>
-  <data name="optionToolStripMenuItem.Text" xml:space="preserve">
-    <value>オプション(&amp;O)</value>
-  </data>
   <data name="toolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 20</value>
   </data>
   <data name="toolToolStripMenuItem.Text" xml:space="preserve">
     <value>ツール(&amp;T)</value>
+  </data>
+  <data name="authenticationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="authenticationToolStripMenuItem.Text" xml:space="preserve">
+    <value>承認画面(&amp;A)</value>
+  </data>
+  <data name="optionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="optionToolStripMenuItem.Text" xml:space="preserve">
+    <value>オプション(&amp;O)</value>
   </data>
   <data name="columnHeader1.Text" xml:space="preserve">
     <value>イメージ名</value>
@@ -166,6 +166,30 @@
   </data>
   <data name="columnHeader4.Width" type="System.Int32, mscorlib">
     <value>76</value>
+  </data>
+  <data name="icoTwiDaken.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AAAAAAAAAAAAAAAAAP8AAAD/kpKQ/5KSkP+SkpD/kpKQ/5KSkP+SkpD/kpKQ/5SUk/+SkpD/kpKQ/wAA
+        AP8AAAD/AAAAAAAAAP+zsbH/s7Gx/wAAAP+SkpD/kpKQ/5KSkP+SkpD/lJST/5KSkP+SkpD/lJST/wAA
+        AP+zsbH/s7Gx/wAAAP8AAAD/lJST/7Oxsf8AAAD/kpKQ/5KSkP+SkpD/kpKQ/5KSkP+SkpD/lJST/5KS
+        kP8AAAD/s7Gx/5SUk/8AAAD/AAAA/7Oxsf+UlJP/s7Gx/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/s7Gx/5SUk//R09H/AAAA/wAAAP+zsbH/0dPR/wAAAP/83H///Nx///zcf//83H//4N/a/+Dg
+        3v/f3t7/4ODe/wAAAP/R09H/0dPR/wAAAP8AAAD/s7Gx/9HT0f8AAAD//Nx///zcf//83H///Nx//+je
+        vf/g4N7/4ODe/+Dg3v8AAAD/0dPR/9HT0f8AAAD/AAAA/7Oxsf/R09H/AAAA//zcf//83H///Nx///zc
+        f//036D/4ODe/+Dg3v/f3t7/AAAA/9HT0f/R09H/AAAA/wAAAP+zsbH/0dPR/wAAAP/46sD//Nx///zc
+        f//83H///Nx//+zetP/g4N7/4ODe/wAAAP/R09H/0dPR/wAAAP8AAAD/s7Gx/9HT0f8AAAD/4ODe//Tn
+        wP/83H//0L6J//zcf//83H///Nx//+Pf0v8AAAD/0dPR/9HT0f8AAAD/AAAA/7Oxsf/R09H/AAAA/+Dg
+        3v/g4N7//Nx///zcf//83H//397e/+He1f/j3s7/AAAA/9HT0f/R09H/AAAA/wAAAP+zsbH/0dPR/wAA
+        AP/f3t7/397e/+Dg3v/g4N7/4ODe/+Dg3v/g4N7/4ODe/wAAAP/R09H/0dPR/wAAAP8AAAD/s7Gx/5SU
+        k/8AAAD/397e/9/e3v/f3t7/397e/9/e3v/f3t7/397e/9/e3v8AAAD/lJST/7Oxsf8AAAD/AAAA/5SU
+        k//g4N7/lJST/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/lJST/+Dg3v+UlJP/AAAA/wAA
+        AAAAAAD/lJST/+Dg3v/g4N7/4ODe/+Dg3v/g4N7/4ODe/+Dg3v/g4N7/4ODe/+Dg3v+UlJP/AAAA/wAA
+        AAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AAAAAAAAwAOsQYABrEEAAKxBAACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQAA
+        rEGAAaxBwAOsQQ==
+</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
