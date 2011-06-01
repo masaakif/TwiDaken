@@ -104,7 +104,7 @@ namespace TwiDaken
             InitializeComponent();
             btnTweet.Enabled = false;
 
-            this.Text = "TwiDaken " + "version " + Application.ProductVersion;
+            this.Text = "TwiDaken " + "version " + Application.ProductVersion + " hogehoge";
             icoTwiDaken.Text = this.Text;
         }
 
@@ -163,19 +163,17 @@ namespace TwiDaken
             updateListViewCounts(ref mcp);
         }
 
-        private void authenticationToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnTweet_Click(object sender, EventArgs e)
         {
-            dlgTwitterOAuth d = new dlgTwitterOAuth(ref au);
-            d.ShowDialog(this);
-            au = d.au;
-            d.Dispose();
-            if (au != null)
-            {
-                btnTweet.Enabled = true;
-            }
+            updateToTwitter();
         }
 
-        private void btnTweet_Click(object sender, EventArgs e)
+        private void cmnuTwiDaken_tsmnuUpdateToTwitter_Click(object sender, EventArgs e)
+        {
+            updateToTwitter();
+        }
+
+        private void updateToTwitter()
         {
             int total = 0;
             foreach (ModuleCountPair mcp in lm)
@@ -193,13 +191,6 @@ namespace TwiDaken
             parameters2.Clear();
             parameters2.Add("status", au.UrlEncode(tw2));
             au.Post("http://twitter.com/statuses/update.xml", parameters2);
-
-        }
-
-        private void icoTwiDaken_MouseClick(object sender, MouseEventArgs e)
-        {
-            Point mp = Control.MousePosition;
-            cmnuTwiDaken.Show(mp);
         }
 
         private void frmTwiDaken_FormClosing(object sender, FormClosingEventArgs e)
@@ -207,9 +198,71 @@ namespace TwiDaken
             icoTwiDaken.Visible = false;
         }
 
-        private void frmTwiDaken_Deactivate(object sender, EventArgs e)
+        private void mnuMain_tsmnuExitTwiDaken_Click(object sender, EventArgs e)
         {
-            // cmnuTwiDaken.Visible = false;
+            closeTwiDaken();
+        }
+
+        private void cmnuTwiDaken_tsmnuExitTwiDaken_Click(object sender, EventArgs e)
+        {
+            closeTwiDaken();
+        }
+
+        private void AuthenticateWithTwitter()
+        {
+            dlgTwitterOAuth d = new dlgTwitterOAuth(ref au);
+            d.ShowDialog(this);
+            au = d.au;
+            d.Close();
+            d.Dispose();
+            if (au != null)
+            {
+                btnTweet.Enabled = true;
+                cmnuTwiDaken_tsmnuUpdateToTwitter.Enabled = true;
+            }
+        }
+
+        private void mnuMain_tsmnuAuthentication_Click(object sender, EventArgs e)
+        {
+            AuthenticateWithTwitter();
+        }
+
+        private void cmnuTwiDaken_tsmnuAuthentication_Click(object sender, EventArgs e)
+        {
+            AuthenticateWithTwitter();
+        }
+
+        private void frmTwiDaken_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.ShowInTaskbar = false;
+            }
+            else
+            {
+                this.ShowInTaskbar = true;
+            }
+        }
+
+        private void closeTwiDaken()
+        {
+            icoTwiDaken.Visible = false;
+            this.Close();
+        }
+
+        private void cmnuTwiDaken_tsmnuOpenMainWindow_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+        }
+
+        private void mnuMain_tsmnuRemoveConfigFile_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("!TODO!", "Caption??", MessageBoxButtons.YesNo); /* TODO : Should implement RemoveConfigFile */
+            if (au == null)
+            {
+                btnTweet.Enabled = false;
+                cmnuTwiDaken_tsmnuUpdateToTwitter.Enabled = false;
+            }
         }
     }
 }

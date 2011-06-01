@@ -131,13 +131,13 @@
     <value>ツール(&amp;T)</value>
   </data>
   <data name="authenticationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>134, 22</value>
   </data>
   <data name="authenticationToolStripMenuItem.Text" xml:space="preserve">
     <value>承認画面(&amp;A)</value>
   </data>
   <data name="optionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>134, 22</value>
   </data>
   <data name="optionToolStripMenuItem.Text" xml:space="preserve">
     <value>オプション(&amp;O)</value>
@@ -166,6 +166,18 @@
   </data>
   <data name="columnHeader4.Width" type="System.Int32, mscorlib">
     <value>76</value>
+  </data>
+  <data name="columnHeader5.Text" xml:space="preserve">
+    <value>クリック数</value>
+  </data>
+  <data name="columnHeader5.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="columnHeader6.Text" xml:space="preserve">
+    <value>ホイール回転数</value>
+  </data>
+  <data name="columnHeader6.Width" type="System.Int32, mscorlib">
+    <value>80</value>
   </data>
   <data name="icoTwiDaken.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -56,6 +56,12 @@
       <Link>Utils.cs</Link>
     </Compile>
     <Compile Include="Auth.cs" />
+    <Compile Include="dlgOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgOptions.Designer.cs">
+      <DependentUpon>dlgOptions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\ConsumerKeys.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -81,6 +87,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="dlgOptions.ja.resx">
+      <DependentUpon>dlgOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgOptions.resx">
+      <DependentUpon>dlgOptions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dlgTwitterOAuth.en.resx">
       <DependentUpon>dlgTwitterOAuth.cs</DependentUpon>
     </EmbeddedResource>

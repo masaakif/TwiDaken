@@ -152,6 +152,10 @@
   <metadata name="btnTweet.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnTweet.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
   <data name="btnTweet.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 189</value>
   </data>
@@ -176,35 +180,26 @@
   <data name="&gt;&gt;btnTweet.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="mnuMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="menuStrip1.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="mnuMain.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="mnuMain_tsmnuRemoveConfigFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 22</value>
   </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>319, 24</value>
+  <data name="mnuMain_tsmnuRemoveConfigFile.Text" xml:space="preserve">
+    <value>&amp;Remove config file</value>
   </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 6</value>
   </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
+  <data name="mnuMain_tsmnuExitTwiDaken.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 22</value>
   </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="mnuMain_tsmnuExitTwiDaken.Text" xml:space="preserve">
+    <value>E&amp;xit TwiDaken</value>
   </data>
   <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 20</value>
@@ -212,27 +207,81 @@
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;File</value>
   </data>
+  <data name="mnuMain_tsmnuAuthentication.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="mnuMain_tsmnuAuthentication.Text" xml:space="preserve">
+    <value>&amp;Authenticate with Twitter...</value>
+  </data>
+  <data name="mnuMain_tsmnuSetIgnoreAppList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="mnuMain_tsmnuSetIgnoreAppList.Text" xml:space="preserve">
+    <value>&amp;Set ignore application list...</value>
+  </data>
+  <data name="mnuMain_tsmnuOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="mnuMain_tsmnuOptions.Text" xml:space="preserve">
+    <value>&amp;Option...</value>
+  </data>
   <data name="toolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 20</value>
   </data>
   <data name="toolToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Tool</value>
   </data>
-  <data name="authenticationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 22</value>
+  <data name="mnuMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="authenticationToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Authentication</value>
+  <data name="mnuMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>319, 24</value>
   </data>
-  <data name="optionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 22</value>
+  <data name="mnuMain.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="optionToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Option...</value>
+  <data name="mnuMain.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;mnuMain.Name" xml:space="preserve">
+    <value>mnuMain</value>
+  </data>
+  <data name="&gt;&gt;mnuMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mnuMain.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <metadata name="lvwCounts.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="lvwCounts.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Image Name</value>
+  </data>
+  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+    <value>178</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Key Count</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>First Key Press</value>
+  </data>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>Last Key Press</value>
+  </data>
+  <data name="columnHeader5.Text" xml:space="preserve">
+    <value>Mouse Down</value>
+  </data>
+  <data name="columnHeader6.Text" xml:space="preserve">
+    <value>Mouse Wheel</value>
+  </data>
   <data name="lvwCounts.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 42</value>
   </data>
@@ -254,49 +303,94 @@
   <data name="&gt;&gt;lvwCounts.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
-    <value>Image Name</value>
-  </data>
-  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
-    <value>178</value>
-  </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
-    <value>Count  </value>
-  </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
-    <value>First Key Press</value>
-  </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
-    <value>Last Key Press</value>
-  </data>
-  <data name="columnHeader5.Text" xml:space="preserve">
-    <value>Mouse Down</value>
-  </data>
-  <data name="columnHeader6.Text" xml:space="preserve">
-    <value>Mouse Wheel</value>
-  </data>
   <metadata name="icoTwiDaken.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
   </metadata>
+  <metadata name="cmnuTwiDaken.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>244, 21</value>
+  </metadata>
+  <data name="cmnuTwiDaken_tsmnuOpenMainWindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuOpenMainWindow.Text" xml:space="preserve">
+    <value>Open main window</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuMinimizeMainWindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuMinimizeMainWindow.Text" xml:space="preserve">
+    <value>Minimize main window</value>
+  </data>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 6</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuUpdateToTwitter.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuUpdateToTwitter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuUpdateToTwitter.Text" xml:space="preserve">
+    <value>Update to &amp;Twitter</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 6</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuAuthentication.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuAuthentication.Text" xml:space="preserve">
+    <value>&amp;Authenticate with Twitter...</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuSetIgnoreAppList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuSetIgnoreAppList.Text" xml:space="preserve">
+    <value>&amp;Set ignore application list...</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuOptions.Text" xml:space="preserve">
+    <value>&amp;Options...</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 6</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuExitTwiDaken.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 22</value>
+  </data>
+  <data name="cmnuTwiDaken_tsmnuExitTwiDaken.Text" xml:space="preserve">
+    <value>E&amp;xit TwiDaken</value>
+  </data>
+  <data name="cmnuTwiDaken.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 176</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken.Name" xml:space="preserve">
+    <value>cmnuTwiDaken</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="icoTwiDaken.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AAAAAAAAAAAAAAAAAP8AAAD/kpKQ/5KSkP+SkpD/kpKQ/5KSkP+SkpD/kpKQ/5SUk/+SkpD/kpKQ/wAA
-        AP8AAAD/AAAAAAAAAP+zsbH/s7Gx/wAAAP+SkpD/kpKQ/5KSkP+SkpD/lJST/5KSkP+SkpD/lJST/wAA
-        AP+zsbH/s7Gx/wAAAP8AAAD/lJST/7Oxsf8AAAD/kpKQ/5KSkP+SkpD/kpKQ/5KSkP+SkpD/lJST/5KS
-        kP8AAAD/s7Gx/5SUk/8AAAD/AAAA/7Oxsf+UlJP/s7Gx/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/s7Gx/5SUk//R09H/AAAA/wAAAP+zsbH/0dPR/wAAAP/83H///Nx///zcf//83H//4N/a/+Dg
-        3v/f3t7/4ODe/wAAAP/R09H/0dPR/wAAAP8AAAD/s7Gx/9HT0f8AAAD//Nx///zcf//83H///Nx//+je
-        vf/g4N7/4ODe/+Dg3v8AAAD/0dPR/9HT0f8AAAD/AAAA/7Oxsf/R09H/AAAA//zcf//83H///Nx///zc
-        f//036D/4ODe/+Dg3v/f3t7/AAAA/9HT0f/R09H/AAAA/wAAAP+zsbH/0dPR/wAAAP/46sD//Nx///zc
-        f//83H///Nx//+zetP/g4N7/4ODe/wAAAP/R09H/0dPR/wAAAP8AAAD/s7Gx/9HT0f8AAAD/4ODe//Tn
-        wP/83H//0L6J//zcf//83H///Nx//+Pf0v8AAAD/0dPR/9HT0f8AAAD/AAAA/7Oxsf/R09H/AAAA/+Dg
-        3v/g4N7//Nx///zcf//83H//397e/+He1f/j3s7/AAAA/9HT0f/R09H/AAAA/wAAAP+zsbH/0dPR/wAA
-        AP/f3t7/397e/+Dg3v/g4N7/4ODe/+Dg3v/g4N7/4ODe/wAAAP/R09H/0dPR/wAAAP8AAAD/s7Gx/5SU
-        k/8AAAD/397e/9/e3v/f3t7/397e/9/e3v/f3t7/397e/9/e3v8AAAD/lJST/7Oxsf8AAAD/AAAA/5SU
-        k//g4N7/lJST/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/lJST/+Dg3v+UlJP/AAAA/wAA
-        AAAAAAD/lJST/+Dg3v/g4N7/4ODe/+Dg3v/g4N7/4ODe/+Dg3v/g4N7/4ODe/+Dg3v+UlJP/AAAA/wAA
+        AAAAAAAAAAAAAAAAAP8AAAD/S3n//0t5//9Lef//S3n//0t5//9Lef//S3n//0t5//9Lef//S3n//wAA
+        AP8AAAD/AAAAAAAAAP9Lef//S3n//wAAAP9Lef//S3n//0t5//9Lef//S3n//0t5//9Lef//S3n//wAA
+        AP9Lef//S3n//wAAAP8AAAD/ADP//0t5//8AAAD/S3n//0t5//9Lef//S3n//0t5//9Lef//S3n//0t5
+        //8AAAD/S3n//wAz//8AAAD/AAAA/0t5//8AM///M5n//wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/S3n//wAz//8zmf//AAAA/wAAAP9Lef//M5n//wAAAP/83H///Nx///zcf//83H//4N/a/+Dg
+        3v/f3t7/4ODe/wAAAP8zmf//M5n//wAAAP8AAAD/S3n//zOZ//8AAAD//Nx///zcf//83H///Nx//+je
+        vf/g4N7/4ODe/+Dg3v8AAAD/M5n//zOZ//8AAAD/AAAA/0t5//8zmf//AAAA//zcf//83H///Nx///zc
+        f//036D/4ODe/+Dg3v/f3t7/AAAA/zOZ//8zmf//AAAA/wAAAP9Lef//M5n//wAAAP/46sD//Nx///zc
+        f//83H///Nx//+zetP/g4N7/4ODe/wAAAP8zmf//M5n//wAAAP8AAAD/S3n//zOZ//8AAAD/4ODe//Tn
+        wP/83H//0L6J//zcf//83H///Nx//+Pf0v8AAAD/M5n//zOZ//8AAAD/AAAA/0t5//8zmf//AAAA/+Dg
+        3v/g4N7//Nx///zcf//83H//397e/+He1f/j3s7/AAAA/zOZ//8zmf//AAAA/wAAAP9Lef//M5n//wAA
+        AP/f3t7/397e/+Dg3v/g4N7/4ODe/+Dg3v/g4N7/4ODe/wAAAP8zmf//M5n//wAAAP8AAAD/S3n//wAz
+        //8AAAD/397e/9/e3v/f3t7/397e/9/e3v/f3t7/397e/9/e3v8AAAD/ADP//0t5//8AAAD/AAAA/wAz
+        //8zmf//ADP//wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/ADP//zOZ//8AM///AAAA/wAA
+        AAAAAAD/ADP//zOZ//8zmf//M5n//zOZ//8zmf//M5n//zOZ//8zmf//M5n//zOZ//8AM///AAAA/wAA
         AAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
         AAAAAAAAwAOsQYABrEEAAKxBAACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQAA
         rEGAAaxBwAOsQQ==
@@ -304,24 +398,6 @@
   </data>
   <data name="icoTwiDaken.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <metadata name="cmnuTwiDaken.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>244, 17</value>
-  </metadata>
-  <data name="cmnuTwiDaken_OpenMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 22</value>
-  </data>
-  <data name="cmnuTwiDaken_OpenMain.Text" xml:space="preserve">
-    <value>Open main window</value>
-  </data>
-  <data name="cmnuTwiDaken.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 26</value>
-  </data>
-  <data name="&gt;&gt;cmnuTwiDaken.Name" xml:space="preserve">
-    <value>cmnuTwiDaken</value>
-  </data>
-  <data name="&gt;&gt;cmnuTwiDaken.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -409,22 +485,34 @@
   <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;mnuMain_tsmnuExitTwiDaken.Name" xml:space="preserve">
+    <value>mnuMain_tsmnuExitTwiDaken</value>
+  </data>
+  <data name="&gt;&gt;mnuMain_tsmnuExitTwiDaken.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolToolStripMenuItem.Name" xml:space="preserve">
     <value>toolToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;toolToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;authenticationToolStripMenuItem.Name" xml:space="preserve">
-    <value>authenticationToolStripMenuItem</value>
+  <data name="&gt;&gt;mnuMain_tsmnuAuthentication.Name" xml:space="preserve">
+    <value>mnuMain_tsmnuAuthentication</value>
   </data>
-  <data name="&gt;&gt;authenticationToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;mnuMain_tsmnuAuthentication.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;optionToolStripMenuItem.Name" xml:space="preserve">
-    <value>optionToolStripMenuItem</value>
+  <data name="&gt;&gt;mnuMain_tsmnuSetIgnoreAppList.Name" xml:space="preserve">
+    <value>mnuMain_tsmnuSetIgnoreAppList</value>
   </data>
-  <data name="&gt;&gt;optionToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;mnuMain_tsmnuSetIgnoreAppList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuMain_tsmnuOptions.Name" xml:space="preserve">
+    <value>mnuMain_tsmnuOptions</value>
+  </data>
+  <data name="&gt;&gt;mnuMain_tsmnuOptions.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
@@ -469,10 +557,76 @@
   <data name="&gt;&gt;icoTwiDaken.Type" xml:space="preserve">
     <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cmnuTwiDaken_OpenMain.Name" xml:space="preserve">
-    <value>cmnuTwiDaken_OpenMain</value>
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuOpenMainWindow.Name" xml:space="preserve">
+    <value>cmnuTwiDaken_tsmnuOpenMainWindow</value>
   </data>
-  <data name="&gt;&gt;cmnuTwiDaken_OpenMain.Type" xml:space="preserve">
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuOpenMainWindow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuMinimizeMainWindow.Name" xml:space="preserve">
+    <value>cmnuTwiDaken_tsmnuMinimizeMainWindow</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuMinimizeMainWindow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuUpdateToTwitter.Name" xml:space="preserve">
+    <value>cmnuTwiDaken_tsmnuUpdateToTwitter</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuUpdateToTwitter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuAuthentication.Name" xml:space="preserve">
+    <value>cmnuTwiDaken_tsmnuAuthentication</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuAuthentication.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuSetIgnoreAppList.Name" xml:space="preserve">
+    <value>cmnuTwiDaken_tsmnuSetIgnoreAppList</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuSetIgnoreAppList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuOptions.Name" xml:space="preserve">
+    <value>cmnuTwiDaken_tsmnuOptions</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuExitTwiDaken.Name" xml:space="preserve">
+    <value>cmnuTwiDaken_tsmnuExitTwiDaken</value>
+  </data>
+  <data name="&gt;&gt;cmnuTwiDaken_tsmnuExitTwiDaken.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
+    <value>toolStripSeparator4</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuMain_tsmnuRemoveConfigFile.Name" xml:space="preserve">
+    <value>mnuMain_tsmnuRemoveConfigFile</value>
+  </data>
+  <data name="&gt;&gt;mnuMain_tsmnuRemoveConfigFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
