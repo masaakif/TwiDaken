@@ -32,5 +32,6 @@ using System.Runtime.InteropServices;
 // すべての値を指定するか、下のように '*' を使ってビルドおよびリビジョン番号を 
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.3")]
-[assembly: AssemblyFileVersion("1.0.0.3")]
+// Build Number = 1
+[assembly: AssemblyVersion("1.2011.6.2101")]
+[assembly: AssemblyFileVersion("1.2011.6.2101")]

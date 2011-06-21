@@ -9,80 +9,15 @@ using System.Windows.Forms;
 
 using TwiDaken;
 using WindowsAPIs;
+using System.Collections;
+
 
 
 namespace TwiDaken
 {
     public partial class frmTwiDaken : Form
     {
-        public enum ActionType
-        {
-            KeyDown,
-            MouseDown,
-            MouseWheel,
-            MouseMove
-        }
-
-        private class ModuleCountPair
-        {
-            private string moduleName = "";
-
-            private int keycount = 0;
-            private int mousebtncount = 0;
-            private int mousemvdistance = 0;
-            private int mousewheeldistance = 0;
-
-            private DateTime dt_start;
-            private DateTime dt_last;
-            
-
-            public ModuleCountPair(string _module)
-            {
-                if (moduleName == "")
-                {
-                    moduleName = _module;
-                    dt_start = DateTime.Now;
-                }
-            }
-
-            public string getModuleName()   { return moduleName; }
-            public int getKeyCount()        { return keycount; }
-            public int getMouseDownCount()  { return mousebtncount; }
-            public int getMouseWheelCount() { return mousewheeldistance; }
-            public string getStartTime()    { return dt_start.ToShortTimeString(); }
-            public string getLastTime()     { return dt_last.ToShortTimeString(); }
-
-            public void inc(string _module, ActionType a)
-            {
-                if (moduleName == _module)
-                {
-                    inc(a);
-                }
-            }
-
-            public void inc(ActionType a)
-            {
-                if (moduleName != "")
-                {
-                    dt_last = DateTime.Now;
-                    switch (a)
-                    {
-                        case ActionType.KeyDown:
-                            keycount++;
-                            break;
-                        case ActionType.MouseDown:
-                            mousebtncount++;
-                            break;
-                        case ActionType.MouseWheel:
-                            mousewheeldistance++;
-                            break;
-                        default:
-                            // Nothing to do
-                            break;
-                    }
-                }
-            }
-        }
+        //private Configuration cfg;
 
         private List<ModuleCountPair> lm = new List<ModuleCountPair>();
         
@@ -101,6 +36,7 @@ namespace TwiDaken
             KeybordCapture.KeyDown += new EventHandler<KeybordCapture.KeybordCaptureEventArgs>(Global_KeyDown);
             MouseCapture.MouseDown += new EventHandler<MouseCapture.MouseCaptureEventArgs>(Global_MouseDown);
             MouseCapture.MouseWheel += new EventHandler<MouseCapture.MouseCaptureEventArgs>(Global_MouseWheel);
+
             InitializeComponent();
             btnTweet.Enabled = false;
 
@@ -237,15 +173,20 @@ namespace TwiDaken
             if (this.WindowState == FormWindowState.Minimized)
             {
                 this.ShowInTaskbar = false;
+                this.cmnuTwiDaken_tsmnuMinimizeMainWindow.Visible = false;
+                this.cmnuTwiDaken_tsmnuOpenMainWindow.Visible = true;
             }
             else
             {
                 this.ShowInTaskbar = true;
+                this.cmnuTwiDaken_tsmnuMinimizeMainWindow.Visible = true;
+                this.cmnuTwiDaken_tsmnuOpenMainWindow.Visible = false;
             }
         }
 
         private void closeTwiDaken()
         {
+
             icoTwiDaken.Visible = false;
             this.Close();
         }
@@ -253,6 +194,11 @@ namespace TwiDaken
         private void cmnuTwiDaken_tsmnuOpenMainWindow_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
+        }
+
+        private void cmnuTwiDaken_tsmnuMinimizeMainWindow_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void mnuMain_tsmnuRemoveConfigFile_Click(object sender, EventArgs e)
@@ -264,5 +210,175 @@ namespace TwiDaken
                 cmnuTwiDaken_tsmnuUpdateToTwitter.Enabled = false;
             }
         }
+
+        private void lvwCounts_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+
+            switch (lvwCounts.Sorting)
+            {
+                case SortOrder.Ascending:
+                    lvwCounts.Sorting = SortOrder.Descending;
+                    break;
+                default:
+                    lvwCounts.Sorting = SortOrder.Ascending;
+                    break;
+            }
+            lvwCounts.ListViewItemSorter = new ListViewItemComparer(e.Column, lvwCounts.Sorting);
+            lvwCounts.Sort();
+        }
+
+        // Configuration files should be under application directory.
+        private void writeConfig()
+        {
+            // TODO : writeConfig
+        }
+
+        private void readConfig()
+        {
+            // TODO : readConfig
+        }
+
+        private void deleteConfig()
+        {
+            // TODO : deleteConfig
+        }
+
+        private void icoTwiDaken_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            switch (this.WindowState)
+            {
+                case FormWindowState.Normal:
+                case FormWindowState.Maximized:
+                    this.WindowState = FormWindowState.Minimized;
+                    break;
+                case FormWindowState.Minimized:
+                    this.WindowState = FormWindowState.Normal;
+                    break;
+            }            
+        }
     }
+
+    internal enum ActionType
+    {
+        KeyDown,
+        MouseDown,
+        MouseWheel,
+        MouseMove
+    }
+
+    internal class Configuration
+    {
+        public Configuration()
+        {
+        }
+    }
+
+    internal class ModuleCountPair
+    {
+        private string moduleName = "";
+
+        private int keycount = 0;
+        private int mousebtncount = 0;
+        // TODO : private int mousemvdistance = 0;
+        private int mousewheeldistance = 0;
+
+        private DateTime dt_start;
+        private DateTime dt_last;
+
+
+        public ModuleCountPair(string _module)
+        {
+            if (moduleName == "")
+            {
+                moduleName = _module;
+                dt_start = DateTime.Now;
+            }
+        }
+
+        public string getModuleName() { return moduleName; }
+        public int getKeyCount() { return keycount; }
+        public int getMouseDownCount() { return mousebtncount; }
+        public int getMouseWheelCount() { return mousewheeldistance; }
+        public string getStartTime() { return dt_start.ToShortTimeString(); }
+        public string getLastTime() { return dt_last.ToShortTimeString(); }
+
+        public void inc(string _module, ActionType a)
+        {
+            if (moduleName == _module)
+            {
+                inc(a);
+            }
+        }
+
+        public void inc(ActionType a)
+        {
+            if (moduleName != "")
+            {
+                dt_last = DateTime.Now;
+                switch (a)
+                {
+                    case ActionType.KeyDown:
+                        keycount++;
+                        break;
+                    case ActionType.MouseDown:
+                        mousebtncount++;
+                        break;
+                    case ActionType.MouseWheel:
+                        mousewheeldistance++;
+                        break;
+                    default:
+                        // Nothing to do
+                        break;
+                }
+            }
+        }
+    }
+    
+    public class ListViewItemComparer : IComparer
+    {
+        private int _column;
+        private SortOrder _so;
+
+        public ListViewItemComparer(int col, SortOrder so)
+        {
+            _column = col;
+            _so = so;
+        }
+
+        public int Compare(object x, object y)
+        {
+            ListViewItem itemx = (ListViewItem)x;
+            ListViewItem itemy = (ListViewItem)y;
+            
+            int nx = 0;
+            int ny = 0;
+            if (int.TryParse(itemx.SubItems[_column].Text, out nx) && int.TryParse(itemy.SubItems[_column].Text, out ny))
+            {
+                // compare x and y as numeric value
+                if (_so == SortOrder.Ascending)
+                {
+                    return (nx < ny) ? 1 : -1;
+                }
+                else
+                {
+                    return (nx < ny) ? -1 : 1;
+                }
+            }
+            else
+            {
+                // Compare x and y as a string value
+                if (_so == SortOrder.Ascending)
+                {
+                    return string.Compare(itemx.SubItems[_column].Text,
+                        itemy.SubItems[_column].Text);
+                }
+                else
+                {
+                    return string.Compare(itemy.SubItems[_column].Text,
+                        itemx.SubItems[_column].Text);
+                }
+            }
+        }
+    }
+
 }
