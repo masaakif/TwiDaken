@@ -56,6 +56,7 @@ namespace TwiDaken
                     item.SubItems[3].Text = mcp.getLastTime();
                     item.SubItems[4].Text = mcp.getMouseDownCount().ToString();
                     item.SubItems[5].Text = mcp.getMouseWheelCount().ToString();
+                    item.SubItems[6].Text = mcp.getPath();
 
                     isExist = true;
                 }
@@ -64,7 +65,8 @@ namespace TwiDaken
             if (isExist == false)
             {
                 string[] ary = { mcp.getModuleName(), mcp.getKeyCount().ToString(),mcp.getStartTime(), 
-                                   mcp.getLastTime(), mcp.getMouseDownCount().ToString(), mcp.getMouseWheelCount().ToString()};
+                                 mcp.getLastTime(), mcp.getMouseDownCount().ToString(), mcp.getMouseWheelCount().ToString(),
+                                 mcp.getPath() };
                 lvwCounts.Items.Add(new ListViewItem(ary));
             }
         }
@@ -86,16 +88,17 @@ namespace TwiDaken
 
         private void KeyMouseDown(ActionType a)
         {
-            string _module = ut.getActiveWindowModuleName();
+            ModuleInfo mi = ut.getActiveWindowModuleName();
             ModuleCountPair mcp = lm.Find(delegate(ModuleCountPair item)
-            { return item.getModuleName() == _module; });
+            { return item.getModuleName() == mi.moduleName; });
             if (mcp == null)
             {
-                mcp = new ModuleCountPair(_module);
+                mcp = new ModuleCountPair(mi.moduleName);
                 lm.Add(mcp);
             }
 
-            mcp.inc(_module, a);
+            mcp.inc(mi.moduleName, a);
+            mcp.setPath(mi.fullPath);
             updateListViewCounts(ref mcp);
         }
 
@@ -285,6 +288,8 @@ namespace TwiDaken
         private DateTime dt_start;
         private DateTime dt_last;
 
+        private string pathName = "";
+
 
         public ModuleCountPair(string _module)
         {
@@ -301,6 +306,16 @@ namespace TwiDaken
         public int getMouseWheelCount() { return mousewheeldistance; }
         public string getStartTime() { return dt_start.ToShortTimeString(); }
         public string getLastTime() { return dt_last.ToShortTimeString(); }
+        public string getPath() { return pathName; }
+        public void setPath(string _path) { pathName = _path; }
+
+        public void inc(string _module, string _path, ActionType a)
+        {
+            if (moduleName == _module)
+            {
+
+            }
+        }
 
         public void inc(string _module, ActionType a)
         {

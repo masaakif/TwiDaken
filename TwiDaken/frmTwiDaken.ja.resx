@@ -130,18 +130,6 @@
   <data name="toolToolStripMenuItem.Text" xml:space="preserve">
     <value>ツール(&amp;T)</value>
   </data>
-  <data name="authenticationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
-  </data>
-  <data name="authenticationToolStripMenuItem.Text" xml:space="preserve">
-    <value>承認画面(&amp;A)</value>
-  </data>
-  <data name="optionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
-  </data>
-  <data name="optionToolStripMenuItem.Text" xml:space="preserve">
-    <value>オプション(&amp;O)</value>
-  </data>
   <data name="columnHeader1.Text" xml:space="preserve">
     <value>イメージ名</value>
   </data>
@@ -178,6 +166,9 @@
   </data>
   <data name="columnHeader6.Width" type="System.Int32, mscorlib">
     <value>80</value>
+  </data>
+  <data name="columnHeader7.Text" xml:space="preserve">
+    <value>実行ファイルの完全パス名</value>
   </data>
   <data name="icoTwiDaken.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

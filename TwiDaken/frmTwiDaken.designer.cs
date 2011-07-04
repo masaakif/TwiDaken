@@ -47,6 +47,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.icoTwiDaken = new System.Windows.Forms.NotifyIcon(this.components);
             this.cmnuTwiDaken = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmnuTwiDaken_tsmnuOpenMainWindow = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,62 +73,62 @@
             // 
             // mnuMain
             // 
+            resources.ApplyResources(this.mnuMain, "mnuMain");
             this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.toolToolStripMenuItem});
-            resources.ApplyResources(this.mnuMain, "mnuMain");
             this.mnuMain.Name = "mnuMain";
             // 
             // fileToolStripMenuItem
             // 
+            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuMain_tsmnuRemoveConfigFile,
             this.toolStripSeparator4,
             this.mnuMain_tsmnuExitTwiDaken});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             // 
             // mnuMain_tsmnuRemoveConfigFile
             // 
-            this.mnuMain_tsmnuRemoveConfigFile.Name = "mnuMain_tsmnuRemoveConfigFile";
             resources.ApplyResources(this.mnuMain_tsmnuRemoveConfigFile, "mnuMain_tsmnuRemoveConfigFile");
+            this.mnuMain_tsmnuRemoveConfigFile.Name = "mnuMain_tsmnuRemoveConfigFile";
             this.mnuMain_tsmnuRemoveConfigFile.Click += new System.EventHandler(this.mnuMain_tsmnuRemoveConfigFile_Click);
             // 
             // toolStripSeparator4
             // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
             resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
             // 
             // mnuMain_tsmnuExitTwiDaken
             // 
-            this.mnuMain_tsmnuExitTwiDaken.Name = "mnuMain_tsmnuExitTwiDaken";
             resources.ApplyResources(this.mnuMain_tsmnuExitTwiDaken, "mnuMain_tsmnuExitTwiDaken");
+            this.mnuMain_tsmnuExitTwiDaken.Name = "mnuMain_tsmnuExitTwiDaken";
             this.mnuMain_tsmnuExitTwiDaken.Click += new System.EventHandler(this.mnuMain_tsmnuExitTwiDaken_Click);
             // 
             // toolToolStripMenuItem
             // 
+            resources.ApplyResources(this.toolToolStripMenuItem, "toolToolStripMenuItem");
             this.toolToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuMain_tsmnuAuthentication,
             this.mnuMain_tsmnuSetIgnoreAppList,
             this.mnuMain_tsmnuOptions});
             this.toolToolStripMenuItem.Name = "toolToolStripMenuItem";
-            resources.ApplyResources(this.toolToolStripMenuItem, "toolToolStripMenuItem");
             // 
             // mnuMain_tsmnuAuthentication
             // 
-            this.mnuMain_tsmnuAuthentication.Name = "mnuMain_tsmnuAuthentication";
             resources.ApplyResources(this.mnuMain_tsmnuAuthentication, "mnuMain_tsmnuAuthentication");
+            this.mnuMain_tsmnuAuthentication.Name = "mnuMain_tsmnuAuthentication";
             this.mnuMain_tsmnuAuthentication.Click += new System.EventHandler(this.mnuMain_tsmnuAuthentication_Click);
             // 
             // mnuMain_tsmnuSetIgnoreAppList
             // 
-            this.mnuMain_tsmnuSetIgnoreAppList.Name = "mnuMain_tsmnuSetIgnoreAppList";
             resources.ApplyResources(this.mnuMain_tsmnuSetIgnoreAppList, "mnuMain_tsmnuSetIgnoreAppList");
+            this.mnuMain_tsmnuSetIgnoreAppList.Name = "mnuMain_tsmnuSetIgnoreAppList";
             // 
             // mnuMain_tsmnuOptions
             // 
-            this.mnuMain_tsmnuOptions.Name = "mnuMain_tsmnuOptions";
             resources.ApplyResources(this.mnuMain_tsmnuOptions, "mnuMain_tsmnuOptions");
+            this.mnuMain_tsmnuOptions.Name = "mnuMain_tsmnuOptions";
             // 
             // lvwCounts
             // 
@@ -138,7 +139,8 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader7});
             this.lvwCounts.Name = "lvwCounts";
             this.lvwCounts.UseCompatibleStateImageBehavior = false;
             this.lvwCounts.View = System.Windows.Forms.View.Details;
@@ -168,14 +170,19 @@
             // 
             resources.ApplyResources(this.columnHeader6, "columnHeader6");
             // 
+            // columnHeader7
+            // 
+            resources.ApplyResources(this.columnHeader7, "columnHeader7");
+            // 
             // icoTwiDaken
             // 
-            this.icoTwiDaken.ContextMenuStrip = this.cmnuTwiDaken;
             resources.ApplyResources(this.icoTwiDaken, "icoTwiDaken");
+            this.icoTwiDaken.ContextMenuStrip = this.cmnuTwiDaken;
             this.icoTwiDaken.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.icoTwiDaken_MouseDoubleClick);
             // 
             // cmnuTwiDaken
             // 
+            resources.ApplyResources(this.cmnuTwiDaken, "cmnuTwiDaken");
             this.cmnuTwiDaken.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmnuTwiDaken_tsmnuOpenMainWindow,
             this.cmnuTwiDaken_tsmnuMinimizeMainWindow,
@@ -188,24 +195,23 @@
             this.toolStripSeparator2,
             this.cmnuTwiDaken_tsmnuExitTwiDaken});
             this.cmnuTwiDaken.Name = "cmnuTwiDaken";
-            resources.ApplyResources(this.cmnuTwiDaken, "cmnuTwiDaken");
             // 
             // cmnuTwiDaken_tsmnuOpenMainWindow
             // 
-            this.cmnuTwiDaken_tsmnuOpenMainWindow.Name = "cmnuTwiDaken_tsmnuOpenMainWindow";
             resources.ApplyResources(this.cmnuTwiDaken_tsmnuOpenMainWindow, "cmnuTwiDaken_tsmnuOpenMainWindow");
+            this.cmnuTwiDaken_tsmnuOpenMainWindow.Name = "cmnuTwiDaken_tsmnuOpenMainWindow";
             this.cmnuTwiDaken_tsmnuOpenMainWindow.Click += new System.EventHandler(this.cmnuTwiDaken_tsmnuOpenMainWindow_Click);
             // 
             // cmnuTwiDaken_tsmnuMinimizeMainWindow
             // 
-            this.cmnuTwiDaken_tsmnuMinimizeMainWindow.Name = "cmnuTwiDaken_tsmnuMinimizeMainWindow";
             resources.ApplyResources(this.cmnuTwiDaken_tsmnuMinimizeMainWindow, "cmnuTwiDaken_tsmnuMinimizeMainWindow");
+            this.cmnuTwiDaken_tsmnuMinimizeMainWindow.Name = "cmnuTwiDaken_tsmnuMinimizeMainWindow";
             this.cmnuTwiDaken_tsmnuMinimizeMainWindow.Click += new System.EventHandler(this.cmnuTwiDaken_tsmnuMinimizeMainWindow_Click);
             // 
             // toolStripSeparator3
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
             resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
             // 
             // cmnuTwiDaken_tsmnuUpdateToTwitter
             // 
@@ -215,34 +221,34 @@
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
             // 
             // cmnuTwiDaken_tsmnuAuthentication
             // 
-            this.cmnuTwiDaken_tsmnuAuthentication.Name = "cmnuTwiDaken_tsmnuAuthentication";
             resources.ApplyResources(this.cmnuTwiDaken_tsmnuAuthentication, "cmnuTwiDaken_tsmnuAuthentication");
+            this.cmnuTwiDaken_tsmnuAuthentication.Name = "cmnuTwiDaken_tsmnuAuthentication";
             this.cmnuTwiDaken_tsmnuAuthentication.Click += new System.EventHandler(this.cmnuTwiDaken_tsmnuAuthentication_Click);
             // 
             // cmnuTwiDaken_tsmnuSetIgnoreAppList
             // 
-            this.cmnuTwiDaken_tsmnuSetIgnoreAppList.Name = "cmnuTwiDaken_tsmnuSetIgnoreAppList";
             resources.ApplyResources(this.cmnuTwiDaken_tsmnuSetIgnoreAppList, "cmnuTwiDaken_tsmnuSetIgnoreAppList");
+            this.cmnuTwiDaken_tsmnuSetIgnoreAppList.Name = "cmnuTwiDaken_tsmnuSetIgnoreAppList";
             // 
             // cmnuTwiDaken_tsmnuOptions
             // 
-            this.cmnuTwiDaken_tsmnuOptions.Name = "cmnuTwiDaken_tsmnuOptions";
             resources.ApplyResources(this.cmnuTwiDaken_tsmnuOptions, "cmnuTwiDaken_tsmnuOptions");
+            this.cmnuTwiDaken_tsmnuOptions.Name = "cmnuTwiDaken_tsmnuOptions";
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
             // 
             // cmnuTwiDaken_tsmnuExitTwiDaken
             // 
-            this.cmnuTwiDaken_tsmnuExitTwiDaken.Name = "cmnuTwiDaken_tsmnuExitTwiDaken";
             resources.ApplyResources(this.cmnuTwiDaken_tsmnuExitTwiDaken, "cmnuTwiDaken_tsmnuExitTwiDaken");
+            this.cmnuTwiDaken_tsmnuExitTwiDaken.Name = "cmnuTwiDaken_tsmnuExitTwiDaken";
             this.cmnuTwiDaken_tsmnuExitTwiDaken.Click += new System.EventHandler(this.cmnuTwiDaken_tsmnuExitTwiDaken_Click);
             // 
             // frmTwiDaken
@@ -295,6 +301,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuMain_tsmnuExitTwiDaken;
         private System.Windows.Forms.ToolStripMenuItem mnuMain_tsmnuRemoveConfigFile;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
     }
 }
 
