@@ -47,16 +47,19 @@ namespace TwiDaken
         private void updateListViewCounts(ref ModuleCountPair mcp)
         {
             bool isExist = false;
+            ListViewItem lastItem;
 
-            foreach (ListViewItem item in lvwCounts.Items)
+            if (0 < lvwCounts.Items.Count)
             {
-                if (item.SubItems[0].Text == mcp.getModuleName())
+                lastItem = lvwCounts.Items[lvwCounts.Items.Count - 1];
+
+                if (lastItem.SubItems[0].Text == mcp.getModuleName())
                 {
-                    item.SubItems[1].Text = mcp.getKeyCount().ToString();
-                    item.SubItems[3].Text = mcp.getLastTime();
-                    item.SubItems[4].Text = mcp.getMouseDownCount().ToString();
-                    item.SubItems[5].Text = mcp.getMouseWheelCount().ToString();
-                    item.SubItems[6].Text = mcp.getPath();
+                    lastItem.SubItems[1].Text = mcp.getKeyCount().ToString();
+                    lastItem.SubItems[3].Text = mcp.getLastTime();
+                    lastItem.SubItems[4].Text = mcp.getMouseDownCount().ToString();
+                    lastItem.SubItems[5].Text = mcp.getMouseWheelCount().ToString();
+                    lastItem.SubItems[6].Text = mcp.getPath();
 
                     isExist = true;
                 }

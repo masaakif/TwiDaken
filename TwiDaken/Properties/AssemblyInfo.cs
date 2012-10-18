@@ -33,5 +33,5 @@ using System.Runtime.InteropServices;
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
 // Build Number = 1
-[assembly: AssemblyVersion("1.2011.7.0401")]
-[assembly: AssemblyFileVersion("1.2011.7.0401")]
+[assembly: AssemblyVersion("1.2011.7.1301")]
+[assembly: AssemblyFileVersion("1.2011.7.1301")]
