@@ -19,8 +19,9 @@ namespace TwiDaken
     {
         //private Configuration cfg;
 
-        private List<ModuleCountPair> lm = new List<ModuleCountPair>();
-        
+        //private List<ModuleCountPair> lm = new List<ModuleCountPair>();
+        private ModuleCountPair mcp;
+
         /*
         private string AccessToken = "";
         private string AccessTokenSecret = "";
@@ -56,6 +57,7 @@ namespace TwiDaken
                 if (lastItem.SubItems[0].Text == mcp.getModuleName())
                 {
                     lastItem.SubItems[1].Text = mcp.getKeyCount().ToString();
+                    lastItem.SubItems[2].Text = mcp.getStartTime();
                     lastItem.SubItems[3].Text = mcp.getLastTime();
                     lastItem.SubItems[4].Text = mcp.getMouseDownCount().ToString();
                     lastItem.SubItems[5].Text = mcp.getMouseWheelCount().ToString();
@@ -91,17 +93,22 @@ namespace TwiDaken
 
         private void KeyMouseDown(ActionType a)
         {
+            
             ModuleInfo mi = ut.getActiveWindowModuleName();
-            ModuleCountPair mcp = lm.Find(delegate(ModuleCountPair item)
-            { return item.getModuleName() == mi.moduleName; });
+
             if (mcp == null)
             {
-                mcp = new ModuleCountPair(mi.moduleName);
-                lm.Add(mcp);
+                mcp = new ModuleCountPair(mi.moduleName, mi.fullPath);
+            }
+            else if (mcp.getModuleName() == mi.moduleName && mcp.getPath() == mi.fullPath)
+            {
+                mcp.inc(mi.moduleName, a);
+            }
+            else
+            {
+                mcp = new ModuleCountPair(mi.moduleName, mi.fullPath);
             }
 
-            mcp.inc(mi.moduleName, a);
-            mcp.setPath(mi.fullPath);
             updateListViewCounts(ref mcp);
         }
 
@@ -118,6 +125,7 @@ namespace TwiDaken
         private void updateToTwitter()
         {
             int total = 0;
+            /*
             foreach (ModuleCountPair mcp in lm)
             {
                 Dictionary<string, string> parameters = new Dictionary<string, string>();
@@ -133,6 +141,7 @@ namespace TwiDaken
             parameters2.Clear();
             parameters2.Add("status", au.UrlEncode(tw2));
             au.Post("http://twitter.com/statuses/update.xml", parameters2);
+             * */
         }
 
         private void frmTwiDaken_FormClosing(object sender, FormClosingEventArgs e)
@@ -293,14 +302,14 @@ namespace TwiDaken
 
         private string pathName = "";
 
-
-        public ModuleCountPair(string _module)
+        public ModuleCountPair(string _module, string _path)
         {
-            if (moduleName == "")
-            {
-                moduleName = _module;
-                dt_start = DateTime.Now;
-            }
+            moduleName = _module;
+            pathName = _path;
+            dt_start = DateTime.Now;
+            keycount = 0;
+            mousebtncount = 0;
+            mousewheeldistance = 0;
         }
 
         public string getModuleName() { return moduleName; }
